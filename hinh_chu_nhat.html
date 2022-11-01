@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px"></canvas>
+<p id="show"></p>
+    <script>
+        class rectangle{
+            height
+            width
+            constructor(height,width) {
+                this.height = height;
+                this.width = width;
+            }
+            getHeight(){
+                return this.height;
+            }
+            getWidth(){
+                return this.width;
+            }
+            getArea(){
+                return this.height*this.width;
+            }
+            getPerimeter(){
+                return (this.height+this.width)*2;
+            }
+        }
+        function createRectangle(){
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.rect(200, 20, wid, hei);
+            ctx.stroke();
+        }
+
+        let rec = new rectangle(100,200);
+        let hei = rec.getHeight();
+        let wid = rec.getWidth()
+        let area = rec.getArea();
+        let peri = rec.getPerimeter()
+        createRectangle()
+        // document.getElementById("show").innerHTML = "Height: " + hei + "; Width: " + wid+"; Area: "+area+"; Perimeter: "+peri;
+        console.log("Height: " + hei + "; Width: " + wid+"; Area: "+area+"; Perimeter: "+peri);
+    </script>
+</body>
+</html>

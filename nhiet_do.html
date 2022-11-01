@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let temperature = function (C) {
+    //     this.C = C
+    //     this.getC = function () {
+    //         return C;
+    //     }
+    //     this.getF = function () {
+    //         return C * 1.8 + 32;
+    //     }
+    //     this.getK = function () {
+    //         return C + 273.15;
+    //     }
+    // }
+    class temperature{
+        C
+        constructor(C) {
+            this.C = C;
+        }
+        getF(){
+            return this.C * 1.8 + 32;
+        }
+        getK(){
+            return this.C + 273.15;
+        }
+    }
+    let temp =new temperature(25);
+    let f = temp.getF();
+    let k = temp.getK();
+    document.write('Nhiệt độ K: '+k+'<br>'+'Nhiệt độ F: '+f)
+</script>
+</body>
+</html>
